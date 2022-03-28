@@ -22,7 +22,7 @@
 {% block body_block %}
 
     <p>
-        <a href={% url 'videojuego' %}>VOLVER</a>
+        <a href={% url 'videojuego' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
     </p>
     <form action={% url 'crear_videojuego' %} method='post'>
         {% csrf_token %}

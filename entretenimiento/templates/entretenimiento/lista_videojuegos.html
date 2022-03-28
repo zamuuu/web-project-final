@@ -23,7 +23,7 @@
 {% block body_block %}
 
     <p>
-        <a href={% url 'videojuego' %}>VOLVER</a>
+        <a href={% url 'videojuego' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
     </p>
     <form action={% url 'lista_videojuegos' %} method='get'>
         {% csrf_token %}
@@ -34,6 +34,11 @@
     </form>
     
     {% for videojuego in videojuegos %}
-        <li>{{videojuego}} | {{videojuego.genero}}</li>
+        <li>
+            {{videojuego}}, {{videojuego.genero}}
+            <a href={% url 'detalle_videojuego' videojuego.id %}>mas</a> |
+            <a href={% url 'editar_videojuego' videojuego.id %}>editar</a> |
+            <a href={% url 'borrar_videojuego' videojuego.id %}>borrar</a>
+        </li>
     {% endfor %}
 {% endblock body_block %}

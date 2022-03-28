@@ -2,6 +2,9 @@ from django.shortcuts import redirect, render
 from .models import VideoJuegos, Peliculas, Series
 from .forms import VideoJuegosForm, PeliculasForm, SeriesForm, VideoJuegosBusqueda
 from django.contrib.auth.decorators import login_required
+# from django.views.generic import ListView # Hacer lista_videojuegos con clases basadas en vistas
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import UpdateView, DeleteView, CreateView # CreateView es para crear_videojuego con clases basadas en vistas
 
 def videojuego(request):
     return render(request, 'entretenimiento/videojuego.html', {})
@@ -32,6 +35,21 @@ def lista_videojuegos(request):
     
     form = VideoJuegosBusqueda()
     return render(request, 'entretenimiento/lista_videojuegos.html', {'form': form, 'videojuegos': videojuegos})
+
+
+class DetalleVideojuego(DetailView):
+    model = VideoJuegos
+    template_name = 'entretenimiento/detalle_videojuego.html'
+    
+class EditarVideojuego(UpdateView):
+    model = VideoJuegos
+    succes_url = '/entretenimiento/videojuegos/lista'
+    fields = ['nombre', 'genero', 'divertido']
+
+class BorrarVideojuego(DeleteView):
+    model = VideoJuegos
+    succes_url = '/entretenimiento/videojuegos/lista'
+
 
 
 def pelicula(request):
