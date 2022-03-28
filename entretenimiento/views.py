@@ -1,11 +1,12 @@
 from django.shortcuts import redirect, render
 from .models import VideoJuegos, Peliculas, Series
 from .forms import VideoJuegosForm, PeliculasForm, SeriesForm, VideoJuegosBusqueda
-
+from django.contrib.auth.decorators import login_required
 
 def videojuego(request):
     return render(request, 'entretenimiento/videojuego.html', {})
 
+@login_required
 def crear_videojuego(request):
     
     if request.method == 'POST':
@@ -36,6 +37,7 @@ def lista_videojuegos(request):
 def pelicula(request):
     return render(request, 'entretenimiento/pelicula.html', {})
 
+@login_required
 def crear_pelicula(request):
     
     if request.method == 'POST':
@@ -54,6 +56,7 @@ def crear_pelicula(request):
 def serie(request):
     return render(request, 'entretenimiento/serie.html', {})
 
+@login_required
 def crear_serie(request):
     
     if request.method == 'POST':

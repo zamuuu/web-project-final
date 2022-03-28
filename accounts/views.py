@@ -1,9 +1,9 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login as auth_login, authenticate
+from .forms import NuestroUserForm
 
 def login(request):
-    
     if request.method == 'POST':
         login_form = AuthenticationForm(request, data=request.POST)
     
@@ -26,3 +26,18 @@ def login(request):
 
 def logout(request):
     ...
+
+
+def register(request):
+    form = NuestroUserForm()
+    
+    if request.method == 'POST':
+        form = NuestroUserForm(request.POST)
+    
+    if form.is_valid():
+        username = form.cleaned_data['username']
+        form.save()
+        return render(request, 'index/index.html', {'msj': f'¡Se creo correctamente al usuario {username} CORRECTAMENTE!'})
+        return redirect('login')
+        
+    return render(request, 'accounts/register.html', {'form': form})
