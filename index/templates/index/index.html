@@ -63,8 +63,17 @@
         {% endblock header_block %}
         <!-- Features section-->
         {% block body_block %}
+
         {% if msj %}
-            <h3 style='color: #90ee90; text-shadow: 2px 4px 15px #000'>{{msj}}</h3>
+        <div style='display: flex; 
+        justify-content: center; 
+        margin: 1rem; 
+        box-shadow: 1rem 1rem 150rem #444; 
+        background-color: #85A6B9; 
+        border-radius: 30px; 
+        text-shadow: 1px 1px 40px #000;'>
+            <h3 style='padding: 3rem; color: #383A40; '>{{msj}}</h3>
+        </div>
         {% endif %}
         <section class="py-5 border-bottom" id="features">
             <div class="container px-5 my-5">

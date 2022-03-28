@@ -37,7 +37,7 @@ def register(request):
     if form.is_valid():
         username = form.cleaned_data['username']
         form.save()
-        return render(request, 'index/index.html', {'msj': f'¡Se creo correctamente al usuario {username} CORRECTAMENTE!'})
+        return render(request, 'index/index.html', {'msj': f'Se creo el usuario {username} CORRECTAMENTE ✓'})
         return redirect('login')
         
     return render(request, 'accounts/register.html', {'form': form})
