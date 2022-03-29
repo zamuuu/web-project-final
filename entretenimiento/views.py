@@ -42,12 +42,12 @@ class DetalleVideojuego(DetailView):
     
 class EditarVideojuego(UpdateView):
     model = VideoJuegos
-    succes_url = '/entretenimiento/videojuegos/lista'
+    success_url = '/entretenimiento/videojuegos/lista'
     fields = ['nombre', 'genero', 'divertido']
 
 class BorrarVideojuego(DeleteView):
     model = VideoJuegos
-    succes_url = '/entretenimiento/videojuegos/lista'
+    success_url = '/entretenimiento/videojuegos/lista'
 
 
 

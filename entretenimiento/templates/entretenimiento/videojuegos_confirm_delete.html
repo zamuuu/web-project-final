@@ -13,7 +13,7 @@
         <a href={% url 'lista_videojuegos' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
     </p>
     
-    <form action={% url 'videojuego' %} method='post'>
+    <form action='' method='post'>
         {% csrf_token %}
         Esta seguro de que quiere eliminar el videojuego, {{object}}?<br><br><br>
         <input style='padding: 1rem 3rem; margin: 1rem;' type="submit" value='Borrar'>
