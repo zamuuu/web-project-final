@@ -2,9 +2,8 @@ from django.shortcuts import redirect, render
 from .models import VideoJuegos, Peliculas, Series
 from .forms import VideoJuegosForm, PeliculasForm, SeriesForm, VideoJuegosBusqueda
 from django.contrib.auth.decorators import login_required
-# from django.views.generic import ListView # Hacer lista_videojuegos con clases basadas en vistas
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import UpdateView, DeleteView, CreateView # CreateView es para crear_videojuego con clases basadas en vistas
+from django.views.generic.edit import UpdateView, DeleteView
 
 def videojuego(request):
     return render(request, 'entretenimiento/videojuego.html', {})
