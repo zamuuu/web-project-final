@@ -1,9 +1,10 @@
 from django.shortcuts import redirect, render
 from .models import VideoJuegos, Peliculas, Series
 from .forms import VideoJuegosForm, PeliculasForm, SeriesForm, VideoJuegosBusqueda
-from django.contrib.auth.decorators import login_required
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import UpdateView, DeleteView
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 def videojuego(request):
     return render(request, 'entretenimiento/videojuego.html', {})
@@ -40,12 +41,12 @@ class DetalleVideojuego(DetailView):
     model = VideoJuegos
     template_name = 'entretenimiento/detalle_videojuego.html'
     
-class EditarVideojuego(UpdateView):
+class EditarVideojuego(LoginRequiredMixin, UpdateView):
     model = VideoJuegos
     success_url = '/entretenimiento/videojuegos/lista'
     fields = ['nombre', 'genero', 'divertido']
 
-class BorrarVideojuego(DeleteView):
+class BorrarVideojuego(LoginRequiredMixin, DeleteView):
     model = VideoJuegos
     success_url = '/entretenimiento/videojuegos/lista'
 

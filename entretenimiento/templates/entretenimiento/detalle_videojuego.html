@@ -18,8 +18,11 @@
     <p>
         <li>Juego: {{object.nombre}}</li>
         <li>Genero: {{object.genero}}</li>
-        <li>Es divertido: {{object.divertido}}</li>
+        {% if object.divertido %}
+            <li>Es divertido: Si</li>
+        {% else %}
+            <li>Es divertido: No</li>
+        {% endif %}
     </p>
-
 
 {% endblock body_block %}
