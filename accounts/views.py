@@ -48,7 +48,7 @@ def register(request):
 
 
 @login_required
-def edit(request):    
+def edit(request):
     logged_user = request.user
     msj = ''
     
