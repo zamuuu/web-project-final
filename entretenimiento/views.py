@@ -17,7 +17,7 @@ def crear_videojuego(request):
 
         if form.is_valid():
             data = form.cleaned_data
-            videojuego = VideoJuegos(nombre=data['nombre'], genero=data['genero'], divertido=data['divertido'])
+            videojuego = VideoJuegos(nombre=data['nombre'], genero=data['genero'], divertido=data['divertido'], contenido=data['contenido'])
             videojuego.save()
             return redirect('index')
         

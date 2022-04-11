@@ -23,6 +23,7 @@
         {% else %}
             <li>Es divertido: No</li>
         {% endif %}
+        <li>Contenido: {{object.contenido | safe}}</li>
     </p>
 
 {% endblock body_block %}
