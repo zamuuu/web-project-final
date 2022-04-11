@@ -22,7 +22,7 @@
         {% if page.image_page %}
             <img src="{{page.image_page.url}}" alt="image" height="70"> <br>
         {% endif %}
-        <li>{{page.content|striptags|safe}}</li>
+        <li>{{page.content | safe }}</li>
         <li>{{page.datetimecreation | date:'d-m-Y H:m'}}</li>
     </p>
 

@@ -20,8 +20,8 @@ class NuestroEditForm(UserCreationForm):
     
     username = forms.CharField()
     email = forms.EmailField()
-    password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Confirmar contraseña', widget=forms.PasswordInput)
+    password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput, required=False)
+    password2 = forms.CharField(label='Confirmar contraseña', widget=forms.PasswordInput, required=False)
     
     first_name = forms.CharField(label='Nombre', max_length=20, required=False)
     last_name = forms.CharField(label='Apellido', max_length=20, required=False)
