@@ -1,0 +1,27 @@
+{% extends 'index/index.html' %}
+
+{% block header_block %}
+    <div style='display: felx; background-color: #212529;'>
+        <h1 style='justify-content: center; color: #fff; padding: 2rem; margin: 0;'>Profile</h1>
+    </div>
+    <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-95.65,35.05 C144.74,263.98 442.15,-48.83 526.80,134.72 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #212529;"></path></svg></div>
+{% endblock header_block %}
+
+{% block body_block %}
+    <ul>
+        <li>
+        {% if request.user.userextension.avatar %}
+            <img src="{{request.user.userextension.avatar.url}}" alt="Image profile" height="200" style='border-radius: 20%;'>
+        {% else %}
+            <img src="https://dhtrust.org/wp-content/uploads/2021/10/guest.png" alt="Image profile" height="200" style='border-radius: 20%;'>
+        {% endif %}
+        </li>
+        <li>Username: {{request.user.username}}</li>
+        <li>E-mail: {{request.user.email}}</li>
+        <li>First name: {{request.user.first_name}}</li>
+        <li>Last name: {{request.user.last_name}}</li>
+        <li>Description: {{request.user.userextension.more_description}}</li>
+    </ul>
+    <p>Editar Usuario: <a href={% url 'edit' %}>Aqui</a></p>
+
+{% endblock body_block %}

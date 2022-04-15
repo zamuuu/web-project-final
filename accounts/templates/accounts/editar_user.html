@@ -8,12 +8,14 @@
 {% endblock header_block %}
 
 {% block body_block %}
-
-    <form action={% url 'edit' %} method='post'>
+    <p>
+        <a href={% url 'detail' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
+    </p>
+    <form action={% url 'edit' %} method='post' enctype='multipart/form-data'>
         {% csrf_token %}
         <table>
             {{form.as_table}}
         </table>
-        <input type="submit" value='Guardar'>
+        <input type="submit" value='Guardar cambios'>
     </form>
 {% endblock body_block %}
