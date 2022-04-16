@@ -10,4 +10,4 @@ Esta es una pagina web desarrolada en Django, con multiples funciones. Es una pa
 ### Un pequeño vistaso a la pagina de inicio
 ![image](https://user-images.githubusercontent.com/77868387/163658951-a0601b1c-758d-4016-b64c-9e13ea939ee5.png)
 ### Video exlplicativo sobre la pagina
-[link]
+https://youtu.be/jhof4cHQjoI
