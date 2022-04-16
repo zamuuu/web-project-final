@@ -9,13 +9,17 @@
 {% endblock header_block %}
 
 {% block body_block %}
-    <p>
-        <a href={% url 'lista_videojuegos' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
-    </p>
-    
-    <form action='' method='post'>
-        {% csrf_token %}
-        Esta seguro de que quiere eliminar el videojuego, {{object}}?<br><br><br>
-        <input style='padding: 1rem 3rem; margin: 1rem;' type="submit" value='Borrar'>
-    </form>
+    <div style='width:120rem; margin:0 auto; '>
+        <div style='background: #E0EDFC; padding: 1rem 60rem 1rem 1rem; border-radius: 1rem; margin: 3rem'>
+            <p>
+                <a href={% url 'lista_videojuegos' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
+            </p>
+            
+            <form action='' method='post'>
+                {% csrf_token %}
+                Esta seguro de que quiere eliminar el videojuego, {{object}}?<br><br><br>
+                <input style='padding: 1rem 3rem; margin: 1rem;' type="submit" value='Borrar'>
+            </form>
+        </div>
+    </div>
 {% endblock body_block %}

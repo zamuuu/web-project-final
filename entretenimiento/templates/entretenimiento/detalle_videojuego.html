@@ -11,19 +11,22 @@
 
 {% block body_block %}
 
-    <p>
-        <a href={% url 'lista_videojuegos' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
-    </p>
+    <div style='width:120rem; margin:0 auto; '>
+        <div style='background: #E0EDFC; padding: 1rem 60rem 1rem 1rem; border-radius: 1rem; margin: 3rem'>
+            <p>
+                <a href={% url 'lista_videojuegos' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
+            </p>
 
-    <p>
-        <li>Juego: {{object.nombre}}</li>
-        <li>Genero: {{object.genero}}</li>
-        {% if object.divertido %}
-            <li>Es divertido: Si</li>
-        {% else %}
-            <li>Es divertido: No</li>
-        {% endif %}
-        <li>Contenido: {{object.contenido | safe}}</li>
-    </p>
-
+            <p>
+                <li>Juego: {{object.nombre}}</li>
+                <li>Genero: {{object.genero}}</li>
+                {% if object.divertido %}
+                    <li>Es divertido: Si</li>
+                {% else %}
+                    <li>Es divertido: No</li>
+                {% endif %}
+                <li>Contenido: {{object.contenido | safe}}</li>
+            </p>
+        </div>
+    </div>
 {% endblock body_block %}

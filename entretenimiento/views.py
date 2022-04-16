@@ -44,7 +44,7 @@ class DetalleVideojuego(DetailView):
 class EditarVideojuego(LoginRequiredMixin, UpdateView):
     model = VideoJuegos
     success_url = '/entretenimiento/videojuegos/lista'
-    fields = ['nombre', 'genero', 'divertido']
+    fields = ['nombre', 'genero', 'divertido', 'contenido']
 
 class BorrarVideojuego(LoginRequiredMixin, DeleteView):
     model = VideoJuegos
