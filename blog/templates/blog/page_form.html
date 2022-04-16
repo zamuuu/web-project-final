@@ -20,17 +20,19 @@
 {% endblock header_block %}
 
 {% block body_block %}
-
-    <p>
-        <a href={% url 'pages' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
-    </p>
-    <form action={% url 'page_create' %} method='POST' enctype='multipart/form-data'>
-        {% csrf_token %}
-        <table>
-            {{form.media}}
-            {{form.as_p}}
-        </table>
-        <input type="submit" value='Agregar'>
-    </form>
-
+    <div style='width:50rem; margin:0 auto; '>
+        <div style='background: #E0EDFC; padding: 1rem 60rem 1rem 1rem; border-radius: 1rem; margin: 3rem'>
+            <p>
+                <a href={% url 'pages' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
+            </p>
+            <form action={% url 'page_create' %} method='POST' enctype='multipart/form-data'>
+                {% csrf_token %}
+                <table>
+                    {{form.media}}
+                    {{form.as_p}}
+                </table>
+                <input type="submit" value='Agregar'>
+            </form>
+        </div>
+    </div>
 {% endblock body_block %}

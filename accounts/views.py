@@ -58,7 +58,7 @@ def edit(request):
     
         if form.is_valid():
             data = form.cleaned_data
-            
+            request.user.username = data.get('username',)
             request.user.email = data.get('email',)
             request.user.first_name = data.get('first_name', '')
             request.user.last_name = data.get('last_name', '')

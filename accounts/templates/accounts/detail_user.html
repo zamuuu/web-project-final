@@ -8,20 +8,23 @@
 {% endblock header_block %}
 
 {% block body_block %}
-    <ul>
-        <li>
-        {% if request.user.userextension.avatar %}
-            <img src="{{request.user.userextension.avatar.url}}" alt="Image profile" height="200" style='border-radius: 20%;'>
-        {% else %}
-            <img src="https://dhtrust.org/wp-content/uploads/2021/10/guest.png" alt="Image profile" height="200" style='border-radius: 20%;'>
-        {% endif %}
-        </li>
-        <li>Username: {{request.user.username}}</li>
-        <li>E-mail: {{request.user.email}}</li>
-        <li>First name: {{request.user.first_name}}</li>
-        <li>Last name: {{request.user.last_name}}</li>
-        <li>Description: {{request.user.userextension.more_description}}</li>
-    </ul>
-    <p>Editar Usuario: <a href={% url 'edit' %}>Aqui</a></p>
-
+    <div style='width:50rem; margin:0 auto; padding: 4rem; '>
+        <div style='background: #E0EDFC; padding: 2rem; border-radius: 1rem;'>
+            <ul style='list-style:none'>
+                <li>
+                {% if request.user.userextension.avatar %}
+                    <img src="{{request.user.userextension.avatar.url}}" alt="Image profile" height="200" style='border-radius: 2%;'>
+                {% else %}
+                    <img src="https://dhtrust.org/wp-content/uploads/2021/10/guest.png" alt="Image profile" height="200" style='border-radius: 20%;'>
+                {% endif %}
+                </li>
+                <li><b>Username:</b> {{request.user.username}}</li>
+                <li><b>E-mail:</b> {{request.user.email}}</li>
+                <li><b>First name:</b> {{request.user.first_name}}</li>
+                <li><b>Last name:</b> {{request.user.last_name}}</li>
+                <li><b>Description:</b> {{request.user.userextension.more_description}}</li>
+            </ul>
+            <p>Editar Usuario: <a href={% url 'edit' %} style='text-decoration: none;';>Aqui</a></p>
+        </div>
+    </div>
 {% endblock body_block %}

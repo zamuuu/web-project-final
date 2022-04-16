@@ -10,20 +10,22 @@
 
 
 {% block body_block %}
+    <div style='width:100rem; margin:0 auto; padding: 1rem; '>
+        <div style='background: #E0EDFC; padding: 4rem; border-radius: 1rem;'>
+            <p>
+                <a href={% url 'pages' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
+            </p>
 
-    <p>
-        <a href={% url 'pages' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
-    </p>
-
-    <p>
-        <li>{{page.title}}</li>
-        <li>{{page.subtitle}}</li>
-        <li>{{page.author}}</li>
-        {% if page.image_page %}
-            <img src="{{page.image_page.url}}" alt="image" height="70"> <br>
-        {% endif %}
-        <li>{{page.content | safe }}</li>
-        <li>{{page.datetimecreation | date:'d-m-Y H:m'}}</li>
-    </p>
-
+            <p>
+                <li>{{page.title}}</li>
+                <li>{{page.subtitle}}</li>
+                <li>{{page.author}}</li>
+                {% if page.image_page %}
+                    <img src="{{page.image_page.url}}" alt="image" height="70"> <br>
+                {% endif %}
+                <li>{{page.content | safe }}</li>
+                <li>{{page.datetimecreation | date:'d-m-Y H:m'}}</li>
+            </p>
+        </div>
+    </div>
 {% endblock body_block %}

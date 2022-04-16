@@ -8,18 +8,20 @@
 {% endblock header_block %}
 
 {% block body_block %}
-    <div style='display: felx; justify-content: center; align-items: center;'>
-        <form action={% url 'login' %} method='post'>
-            {% csrf_token %}
-            <table>
-                {{login_form.as_table}}
-            </table>
-            <input type="submit" value='Login'>
-        </form>
-        <p style='color: red;'>
-            {% if msg %}
-                {{msg}}
-            {% endif %}    
-        </p>
+    <div style='width:50rem; margin:0 auto; padding: 8rem; '>
+        <div style='background: #E0EDFC; padding: 2rem; border-radius: 1rem;'>
+            <form action={% url 'login' %} method='post'>
+                {% csrf_token %}
+                <table>
+                    {{login_form.as_table}}
+                </table>
+                <input type="submit" value='Login'>
+            </form>
+            <p style='color: red;'>
+                {% if msg %}
+                    {{msg}}
+                {% endif %}    
+            </p>
+        </div>
     </div>
 {% endblock body_block %}

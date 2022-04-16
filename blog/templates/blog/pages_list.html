@@ -20,23 +20,25 @@
 {% endblock header_block %}
 
 {% block body_block %}
-    
-        <a href={% url 'page_create' %}>Crear articulo</a>
+    <div style='width:65rem; margin:0 auto; padding: 1rem; '>
+        <div style='background: #E0EDFC; padding: 2rem; border-radius: 1rem;'>
+            <a href={% url 'page_create' %}>Crear articulo</a>
 
-    {% for page in page_list %}
-        <ul>
-            <li>{{page.title}}<br>
-                {% if page.image_page %}
-                    <img src="{{page.image_page.url}}" alt="image" height="70"><br>
-                {% endif %}
-                {% comment %} <img src={{page.image_page.url}} alt="imagen" height=50><br> {% endcomment %}
-                {{page.content|striptags|safe|truncatechars:"70"}}<br>
-                {{page.datetimecreation | date:'d-m-Y'}}
-                <a href={% url 'page_detail' page.id %}>mas info</a> |
-                <a href={% url 'page_delete' page.id %}>borrar</a> |
-                <a href={% url 'page_edit' page.id %}>Modificar</a>
-            </li>
-        </ul>
-    {% endfor %}
-
+        {% for page in page_list %}
+            <ul>
+                <li>{{page.title}}<br>
+                    {% if page.image_page %}
+                        <img src="{{page.image_page.url}}" alt="image" height="70"><br>
+                    {% endif %}
+                    {% comment %} <img src={{page.image_page.url}} alt="imagen" height=50><br> {% endcomment %}
+                    {{page.content|striptags|safe|truncatechars:"70"}}<br>
+                    {{page.datetimecreation | date:'d-m-Y'}}
+                    <a href={% url 'page_detail' page.id %}>mas info</a> |
+                    <a href={% url 'page_delete' page.id %}>borrar</a> |
+                    <a href={% url 'page_edit' page.id %}>Modificar</a>
+                </li>
+            </ul>
+        {% endfor %}
+        </div>
+    </div>
 {% endblock body_block %}

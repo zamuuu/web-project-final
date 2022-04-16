@@ -20,9 +20,13 @@
 {% endblock header_block %}
 
 {% block body_block %}
-    <ul>
-        <li>
-            <a href={% url 'crear_pelicula' %}>¡Ingresa tu pelicula favorita!</a>
-        </li>
-    </ul>
+    <div style='width:50rem; margin:0 auto; padding: 4rem; '>
+        <div style='background: #E0EDFC; padding: 2rem; border-radius: 1rem;'>
+            <ul style='list-style:none; '>
+                <li>
+                    <a href={% url 'crear_pelicula' %} style='text-decoration: none;'>¡Ingresa tu pelicula favorita!</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 {% endblock body_block %}

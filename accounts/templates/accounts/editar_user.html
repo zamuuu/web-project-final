@@ -8,14 +8,19 @@
 {% endblock header_block %}
 
 {% block body_block %}
-    <p>
-        <a href={% url 'detail' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
-    </p>
-    <form action={% url 'edit' %} method='post' enctype='multipart/form-data'>
-        {% csrf_token %}
-        <table>
-            {{form.as_table}}
-        </table>
-        <input type="submit" value='Guardar cambios'>
-    </form>
+
+    <div style='width:50rem; margin:0 auto; padding: 4rem; '>
+        <div style='background: #E0EDFC; padding: 2rem; border-radius: 1rem;'>
+            <p>
+                <a href={% url 'detail' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
+            </p>
+            <form action={% url 'edit' %} method='post' enctype='multipart/form-data'>
+                {% csrf_token %}
+                <table>
+                    {{form.as_table}}
+                </table>
+                <input type="submit" value='Guardar cambios'>
+            </form>
+        </div>
+    </div>
 {% endblock body_block %}

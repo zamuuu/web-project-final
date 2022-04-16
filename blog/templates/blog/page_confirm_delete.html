@@ -9,13 +9,18 @@
 {% endblock header_block %}
 
 {% block body_block %}
-    <p>
-        <a href={% url 'pages' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
-    </p>
-    
-    <form action='' method='post'>
-        {% csrf_token %}
-        Esta seguro de que quiere eliminar el articulo, {{object}}?<br><br><br>
-        <input style='padding: 1rem 3rem; margin: 1rem;' type="submit" value='Borrar'>
-    </form>
+
+    <div style='width:90rem; margin:0 auto; padding: 2rem; '>
+        <div style='background: #E0EDFC; padding: 3rem; border-radius: 1rem;'>
+            <p>
+                <a href={% url 'pages' %} style='padding: 1rem;'><i class="bi bi-arrow-bar-left"></i> volver</a>
+            </p>
+            
+            <form action='' method='post'>
+                {% csrf_token %}
+                Esta seguro de que quiere eliminar el articulo, {{object}}?<br><br><br>
+                <input style='padding: 1rem 3rem; margin: 1rem;' type="submit" value='Borrar'>
+            </form>
+        </div>
+    </div>
 {% endblock body_block %}
