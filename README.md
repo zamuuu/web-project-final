@@ -1,11 +1,13 @@
-# web-project
+# Web Blog
 
-Este es un proyecto para mi practica individal creando la primera fase de una página con el framework de Django. Aca se van a poder encontrar formularios para agregar datos 
-a la base de datos sqlite3, buscarlos en la misma base y tambien se encontraran con una serie de paginas de adorno para darle una idea a la página.
+### Samuel Correa
 
-1) Entrar a la pagina principal.
-2) Ingresar a "Videojuegos" para ver las funcionalidades de crear un videojuego y buscar uno ya creado.
-3) Entrar a "¡Ingresa tu videojuego favorito!" ahi, agregar un juego que conozcas, completa todos los datos y "Agregar".
-4) Dirijirse a el apartado de "¡Busca un videojuego!" y poder buscar videojuegos ya agregados como el videojuego que hayas agregado vos.
-5) Entrar a "Peliculas" y ahí entrar a "¡Ingresa tu pelicula favorita!". Agrega una pelicula que te guste y listo.
-6) Seguido dee eso Entrar a "Series", donde tambien se va a poder agregar una serie que te guste mucho. Ingresas los datos requeridos, y listo.
+
+## Description
+Esta es una pagina web desarrolada en Django, con multiples funciones. Es una pagina de practica personal, implementando funciones como el registro de usuarios, el login, logout, edicion de perfil con imagen. Permite crear blogs con un imagenes, en ellos esta la implemetnacion de CKEditor, entre otros campos. Tambien permite eliminar los blogs, editar los blogs y ver un apartado de mas informacion, donde se muestra la informacion completa de paga atriculo (blog).
+
+## Visual
+### Un pequeño vistaso a la pagina de inicio
+![image](https://user-images.githubusercontent.com/77868387/163658951-a0601b1c-758d-4016-b64c-9e13ea939ee5.png)
+### Video exlplicativo sobre la pagina
+[link]
