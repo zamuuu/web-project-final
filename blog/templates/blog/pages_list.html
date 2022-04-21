@@ -30,7 +30,6 @@
                     {% if page.image_page %}
                         <img src="{{page.image_page.url}}" alt="image" height="70"><br>
                     {% endif %}
-                    {% comment %} <img src={{page.image_page.url}} alt="imagen" height=50><br> {% endcomment %}
                     {{page.content|striptags|safe|truncatechars:"70"}}<br>
                     {{page.datetimecreation | date:'d-m-Y'}}
                     <a href={% url 'page_detail' page.id %}>mas info</a> |
@@ -39,6 +38,11 @@
                 </li>
             </ul>
         {% endfor %}
+
+        {% if not page_list %}
+            <p style='color: #ff0000;'>¡No hay articulos creados!</p>
+        {% endif %}
+        
         </div>
     </div>
 {% endblock body_block %}

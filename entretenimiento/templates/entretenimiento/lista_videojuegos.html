@@ -42,6 +42,9 @@
                     <a href={% url 'borrar_videojuego' videojuego.id %}>borrar</a>
                 </li>
             {% endfor %}
+            {% if not videojuegos %}
+                <p style='color: #ff0000;'>¡No se encontraron videojuegos!</p>
+            {% endif %}
         </div>
     </div>
 {% endblock body_block %}
