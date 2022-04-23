@@ -8,6 +8,6 @@ Esta es una pagina web desarrolada en Django, con multiples funciones. Es una pa
 
 ## Visual
 ### Un pequeño vistaso a la pagina de inicio
-![image](https://user-images.githubusercontent.com/77868387/163658951-a0601b1c-758d-4016-b64c-9e13ea939ee5.png)
+![image](https://user-images.githubusercontent.com/77868387/164942949-5c89dd8d-99db-4c35-ad7e-911e7c8aafbc.png)
 ### Video exlplicativo sobre la pagina
 https://youtu.be/jhof4cHQjoI
