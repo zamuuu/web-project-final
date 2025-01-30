@@ -24,6 +24,10 @@
 
                 {% if request.user.is_authenticated %}
                     <a class="navbar-brand" href={% url 'logout' %}>Logout</a>
+                    <!--<form method="POST" action="{% url 'logout' %}" style="display: inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="navbar-brand">Logout</button>
+                    </form>-->
                     <a class="navbar-brand" href={% url 'detail' %} >
                     {% if request.user.userextension.avatar %}
                     <img src="{{request.user.userextension.avatar.url}}" alt="Image profile" height="50" style='display: inline-block; border-radius: 50%; width:40px; height:40px; object-fit: cover;'>
