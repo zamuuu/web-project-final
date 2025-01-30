@@ -28,7 +28,6 @@ def login(request):
 
 def logout(request):
     logout()
-    return render(request, 'accounts/register.html')
 
 
 def register(request):
