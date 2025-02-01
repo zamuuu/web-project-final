@@ -21,9 +21,9 @@ Esta es una pagina web desarrolada en Django, con multiples funciones. Es una pa
 
 5. Activar el entorno virtual; En windows -> ```source venv/Scripts/activate``` || En linux/mac -> ```source venv/bin/activate```
 
-.6 Asegurandose de que el entorno virtual esta activado pasar a ejecutar tranquilamente ```pip install requirements.txt```
+6. Asegurandose de que el entorno virtual esta activado pasar a ejecutar tranquilamente ```pip install requirements.txt```
 
-.7 Ejecutar la migracion de los modelos de la DB ```python manage.py migrate```
+7. Ejecutar la migracion de los modelos de la DB ```python manage.py migrate```
 
 8. Inicar la pagina para poder verla -> ```python manage.py runserver``` y hacer click en la IP proporcionada Y LISTO!
 
